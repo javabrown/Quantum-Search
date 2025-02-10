@@ -6,7 +6,7 @@ This project demonstrates the difference between **classical brute-force search*
 
 ### 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/YOUR_GITHUB/quantum-search.git
+git clone https://github.com/javabrown/quantum-search.git
 cd quantum-search
 ```
 
