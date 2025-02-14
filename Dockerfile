@@ -4,6 +4,8 @@ FROM python:3.10
 # Set the working directory inside the container
 WORKDIR /workspace
 
+ENV IBM_QUANTUM_TOKEN="<IBM_Token-Here>"
+
 # Install system dependencies required for Qiskit Aer
 RUN apt-get update && apt-get install -y \
     gcc \
@@ -18,7 +20,8 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --no-cache-dir \
     qiskit \
     qiskit-aer \
-    qiskit-ibm-runtime
+    qiskit-ibm-runtime \
+    qiskit-ibm-provider
 
 # Install additional Python libraries
 RUN pip install --no-cache-dir jupyterlab numpy scipy matplotlib
