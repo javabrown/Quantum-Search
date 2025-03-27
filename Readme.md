@@ -1,8 +1,8 @@
-# 🚀 Quantum Search Project (Classical vs. Quantum Grover's Algorithm)
+# Quantum Search Project (Classical vs. Quantum Grover's Algorithm)
 
 This project demonstrates the difference between **classical brute-force search** and **quantum search using Grover's Algorithm** in Qiskit. It is fully Dockerized and can be easily set up in any workspace.
 
-## 📦 Project Setup Instructions
+## Project Setup Instructions
 
 ### 1️⃣ **Clone the Repository**
 ```bash
@@ -26,7 +26,7 @@ Once the container is running, access the Jupyter Notebook by opening:
 ```bash
 http://localhost:8888
 ```
-📌 **Find the Jupyter token** in the Docker logs after running `run_docker.sh`.
+**Find the Jupyter token** in the Docker logs after running `run_docker.sh`.
 
 ### 4️⃣ **Run the Quantum Search Program**
 Inside the container, execute the program:
@@ -39,7 +39,7 @@ This runs both:
 
 ---
 
-## 🛠 **Project Structure**
+## **Project Structure**
 ```
 📚 quantum-search/
  ├️ 📚 src/                  # Source code
@@ -54,7 +54,7 @@ This runs both:
 
 ---
 
-## 💪 **Docker Setup Details**
+## **Docker Setup Details**
 The `Dockerfile` installs all necessary quantum computing libraries:
 ```dockerfile
 # Use an official Python image
@@ -90,17 +90,17 @@ This script automates the setup:
 CONTAINER_NAME="quantum_env"
 IMAGE_NAME="quantum-env"
 
-echo "🛡️ Stopping and removing any existing container..."
+echo " Stopping and removing any existing container..."
 docker stop $CONTAINER_NAME 2>/dev/null
 docker rm $CONTAINER_NAME 2>/dev/null
 
-echo "🛢️ Removing old Docker image..."
+echo " Removing old Docker image..."
 docker rmi $IMAGE_NAME 2>/dev/null
 
-echo "🛠️ Building a fresh Docker image..."
+echo " Building a fresh Docker image..."
 docker build -t $IMAGE_NAME .
 
-echo "🚀 Running the new Docker container..."
+echo " Running the new Docker container..."
 docker run -it --rm \
     -p 8888:8888 \
     -v $(pwd)/src:/workspace/src \
@@ -124,26 +124,24 @@ For example:
 ```bash
 pip install matplotlib
 ```
-📌 **For permanent installs**, add the package to `requirements.txt` and rebuild.
+ **For permanent installs**, add the package to `requirements.txt` and rebuild.
 
 ---
 
-## 🚀 **Next Steps**
+##  **Next Steps**
 ✔ **Extend Quantum Search** with real-world problems  
 ✔ **Deploy on Quantum Hardware** via **IBM Quantum Cloud**  
 ✔ **Optimize Quantum Circuits** for faster execution
 
-📌 **Contribute & Extend:**  
+ **Contribute & Extend:**  
 Pull requests welcome! Feel free to extend and improve the quantum search algorithms.
 
 ---
 
-## 🔗 **Resources**
+##  **Resources**
 - **Qiskit Documentation:** [qiskit.org/documentation](https://qiskit.org/documentation/)
 - **Grover's Algorithm Overview:** [IBM Quantum Docs](https://quantum-computing.ibm.com/)
 - **Docker Documentation:** [docker.com](https://docs.docker.com/)
 
 ---
-
-### **👨‍💻 Happy Quantum Computing! 🚀**
 
